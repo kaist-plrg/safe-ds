@@ -1,0 +1,651 @@
+{
+  "String.prototype.toUpperCase": {
+    "call": -228
+  },
+  "Math.tan": {
+    "call": -198
+  },
+  "Date.prototype.toISOString": {
+    "call": -154
+  },
+  "Global.decodeURI": {
+    "call": -70
+  },
+  "Math.round": {
+    "call": -195
+  },
+  "Array.prototype.pop": {
+    "call": -45
+  },
+  "Math.asin": {
+    "call": -183
+  },
+  "String.prototype.toLocaleLowerCase": {
+    "call": -227
+  },
+  "Number.prototype.toExponential": {
+    "call": -108
+  },
+  "Object.defineProperties": {
+    "call": -87
+  },
+  "String.prototype.lastIndexOf": {
+    "call": -218
+  },
+  "Array.prototype.some": {
+    "call": -56
+  },
+  "Date.prototype.setMinutes": {
+    "call": -143
+  },
+  "Date.prototype.setUTCDate": {
+    "call": -148
+  },
+  "Date.prototype.toString": {
+    "call": -113
+  },
+  "Math.sin": {
+    "call": -196
+  },
+  "Function.prototype": {
+    "call": -95
+  },
+  "Object.getOwnPropertyDescriptor": {
+    "call": -83
+  },
+  "Date.prototype.constructor": {
+    "call": -112
+  },
+  "Function": {
+    "call": -100,
+    "construct": -101
+  },
+  "Date.prototype.getUTCMilliseconds": {
+    "call": -136
+  },
+  "String.prototype.concat": {
+    "call": -216
+  },
+  "Document.prototype.write": {
+    "call": -13
+  },
+  "Object.isSealed": {
+    "call": -91
+  },
+  "Object.preventExtensions": {
+    "call": -90
+  },
+  "Document.prototype.createEvent": {
+    "call": -33
+  },
+  "Date.parse": {
+    "call": -158
+  },
+  "Element": {
+    "call": -1,
+    "construct": -2
+  },
+  "Date.UTC": {
+    "call": -159
+  },
+  "Date.prototype.getTimezoneOffset": {
+    "call": -137
+  },
+  "Array.prototype.reverse": {
+    "call": -47
+  },
+  "ToString": {
+    "call": -205
+  },
+  "HTMLDocument": {
+    "call": -8,
+    "construct": -9
+  },
+  "Date.prototype.setHours": {
+    "call": -145
+  },
+  "Date.prototype.getUTCMinutes": {
+    "call": -132
+  },
+  "String.prototype.substr": {
+    "call": -234
+  },
+  "HTMLElement": {
+    "call": -18
+  },
+  "Object.prototype.toString": {
+    "call": -74
+  },
+  "Object.isFrozen": {
+    "call": -92
+  },
+  "Math.max": {
+    "call": -191
+  },
+  "URIError": {
+    "call": -179,
+    "construct": -180
+  },
+  "String.prototype.split": {
+    "call": -224
+  },
+  "Global.encodeURI": {
+    "call": -72
+  },
+  "Object.prototype.valueOf": {
+    "call": -76
+  },
+  "NodeList": {
+    "call": -21,
+    "construct": -22
+  },
+  "Array.prototype.slice": {
+    "call": -49
+  },
+  "Date.prototype.getHours": {
+    "call": -129
+  },
+  "Global.setTimeout": {
+    "call": -15
+  },
+  "Array.prototype.sort": {
+    "call": -50
+  },
+  "Date.prototype.setSeconds": {
+    "call": -141
+  },
+  "EventTarget.prototype.addEventListener": {
+    "call": -7
+  },
+  "Error": {
+    "call": -167,
+    "construct": -168
+  },
+  "Math.sqrt": {
+    "call": -197
+  },
+  "Number": {
+    "call": -110,
+    "construct": -111
+  },
+  "Object.freeze": {
+    "call": -89
+  },
+  "String.prototype.localeCompare": {
+    "call": -219
+  },
+  "Global.decodeURIComponent": {
+    "call": -71
+  },
+  "Array.prototype.splice": {
+    "call": -51
+  },
+  "Date.prototype.setUTCMilliseconds": {
+    "call": -140
+  },
+  "console.error": {
+    "call": -39
+  },
+  "ToNumber": {
+    "call": -206
+  },
+  "Object.prototype.propertyIsEnumerable": {
+    "call": -79
+  },
+  "Date.prototype.getUTCFullYear": {
+    "call": -122
+  },
+  "RangeError": {
+    "call": -171,
+    "construct": -172
+  },
+  "Date.prototype.setUTCSeconds": {
+    "call": -142
+  },
+  "Document.prototype.getElementsByTagName": {
+    "call": -25
+  },
+  "Number.prototype.toFixed": {
+    "call": -107
+  },
+  "Date.prototype.toLocaleTimeString": {
+    "call": -118
+  },
+  "String.prototype.charAt": {
+    "call": -214
+  },
+  "Boolean": {
+    "call": -209,
+    "construct": -210
+  },
+  "Object.seal": {
+    "call": -88
+  },
+  "HTMLDivElement": {
+    "call": -35
+  },
+  "Node": {
+    "call": -3,
+    "construct": -4
+  },
+  "NamedNodeMap": {
+    "construct": -36
+  },
+  "ReferenceError": {
+    "call": -173,
+    "construct": -174
+  },
+  "Object.prototype.toLocaleString": {
+    "call": -75
+  },
+  "HTMLHtmlElement": {
+    "call": -20
+  },
+  "Date.prototype.valueOf": {
+    "call": -119
+  },
+  "String.prototype.replace": {
+    "call": -221
+  },
+  "Date.prototype.getUTCSeconds": {
+    "call": -134
+  },
+  "Object.create": {
+    "call": -85
+  },
+  "Document.prototype.createElement": {
+    "call": -12
+  },
+  "Math.random": {
+    "call": -194
+  },
+  "JSON.stringify": {
+    "call": -200
+  },
+  "Number.prototype.valueOf": {
+    "call": -106
+  },
+  "Date.prototype.toLocaleDateString": {
+    "call": -117
+  },
+  "Math.ceil": {
+    "call": -186
+  },
+  "Global.eval": {
+    "call": -65
+  },
+  "Date.prototype.setUTCHours": {
+    "call": -146
+  },
+  "Array": {
+    "call": -62,
+    "construct": -63
+  },
+  "Object.getOwnPropertyNames": {
+    "call": -84
+  },
+  "Document.prototype.getElementById": {
+    "call": -26
+  },
+  "Global.parseFloat": {
+    "call": -67
+  },
+  "console.log": {
+    "call": -40
+  },
+  "Date.prototype.setUTCFullYear": {
+    "call": -152
+  },
+  "Global.setInterval": {
+    "call": -17
+  },
+  "Date.prototype.getMonth": {
+    "call": -123
+  },
+  "Math.abs": {
+    "call": -181
+  },
+  "Function.prototype.bind": {
+    "call": -99
+  },
+  "Object.isExtensible": {
+    "call": -93
+  },
+  "String.prototype.toLowerCase": {
+    "call": -226
+  },
+  "Array.prototype.unshift": {
+    "call": -52
+  },
+  "Global.encodeURIComponent": {
+    "call": -73
+  },
+  "EvalError": {
+    "call": -169,
+    "construct": -170
+  },
+  "Math.atan": {
+    "call": -184
+  },
+  "Array.prototype.reduceRight": {
+    "call": -61
+  },
+  "Node.prototype.removeChild": {
+    "call": -27
+  },
+  "Element.prototype.getElementById": {
+    "call": -24
+  },
+  "Function.prototype.apply": {
+    "call": -97
+  },
+  "Date.prototype.setUTCMonth": {
+    "call": -150
+  },
+  "Array.prototype.push": {
+    "call": -46
+  },
+  "Math.cos": {
+    "call": -187
+  },
+  "Number.prototype.toString": {
+    "call": -104
+  },
+  "String.prototype.match": {
+    "call": -220
+  },
+  "Boolean.prototype.toString": {
+    "call": -207
+  },
+  "String.fromCharCode": {
+    "call": -233
+  },
+  "Date.prototype.toJSON": {
+    "call": -155
+  },
+  "Date.prototype.getMinutes": {
+    "call": -131
+  },
+  "Array.prototype.shift": {
+    "call": -48
+  },
+  "Array.prototype.every": {
+    "call": -55
+  },
+  "Math.log": {
+    "call": -190
+  },
+  "Error.prototype.toString": {
+    "call": -166
+  },
+  "DefaultValue": {
+    "call": -203
+  },
+  "Object": {
+    "call": -80,
+    "construct": -81
+  },
+  "Array.prototype.filter": {
+    "call": -59
+  },
+  "Location.prototype.replace": {
+    "call": -14
+  },
+  "Object.prototype.isPrototypeOf": {
+    "call": -78
+  },
+  "EventTarget": {
+    "call": -5,
+    "construct": -6
+  },
+  "Array.prototype.indexOf": {
+    "call": -53
+  },
+  "Date.prototype.toDateString": {
+    "call": -114
+  },
+  "Array.prototype.map": {
+    "call": -58
+  },
+  "Array.prototype.lastIndexOf": {
+    "call": -54
+  },
+  "String.prototype.toString": {
+    "call": -212
+  },
+  "RegExp.prototype.test": {
+    "call": -162
+  },
+  "RegExp.prototype.toString": {
+    "call": -163
+  },
+  "Object.getPrototypeOf": {
+    "call": -82
+  },
+  "ToPrimitive": {
+    "call": -204
+  },
+  "Date.prototype.getMilliseconds": {
+    "call": -135
+  },
+  "Date.prototype.getFullYear": {
+    "call": -121
+  },
+  "TypeError": {
+    "call": -177,
+    "construct": -178
+  },
+  "Date.prototype.getSeconds": {
+    "call": -133
+  },
+  "Array.prototype.toLocaleString": {
+    "call": -42
+  },
+  "Math.acos": {
+    "call": -182
+  },
+  "Document.prototype.writeln": {
+    "call": -16
+  },
+  "Date.prototype.setUTCMinutes": {
+    "call": -144
+  },
+  "Node.prototype.appendChild": {
+    "call": -29
+  },
+  "Document.prototype.createComment": {
+    "call": -28
+  },
+  "Date.prototype.setFullYear": {
+    "call": -151
+  },
+  "Boolean.prototype.valueOf": {
+    "call": -208
+  },
+  "Math.exp": {
+    "call": -188
+  },
+  "Object.defineProperty": {
+    "call": -86
+  },
+  "Array.prototype.reduce": {
+    "call": -60
+  },
+  "Date.prototype.getDate": {
+    "call": -125
+  },
+  "Date.prototype.getUTCDate": {
+    "call": -126
+  },
+  "Global.isFinite": {
+    "call": -69
+  },
+  "Function.prototype.call": {
+    "call": -98
+  },
+  "HTMLIFrameElement": {
+    "call": -38
+  },
+  "Date": {
+    "call": -156,
+    "construct": -157
+  },
+  "Date.prototype.setMonth": {
+    "call": -149
+  },
+  "String.prototype.charCodeAt": {
+    "call": -215
+  },
+  "Function.prototype.toString": {
+    "call": -96
+  },
+  "Object.keys": {
+    "call": -94
+  },
+  "String.prototype.trim": {
+    "call": -230
+  },
+  "Math.min": {
+    "call": -192
+  },
+  "Date.prototype.setTime": {
+    "call": -138
+  },
+  "Element.prototype.getElementsByTagName": {
+    "call": -19
+  },
+  "Date.prototype.getTime": {
+    "call": -120
+  },
+  "String.prototype.toLocaleUpperCase": {
+    "call": -229
+  },
+  "Date.prototype.getUTCMonth": {
+    "call": -124
+  },
+  "Global.requestAnimationFrame": {
+    "call": -34
+  },
+  "Array.prototype.toString": {
+    "call": -41
+  },
+  "Global.clearTimeout": {
+    "call": -32
+  },
+  "Node.prototype.insertBefore": {
+    "call": -23
+  },
+  "String.prototype.valueOf": {
+    "call": -213
+  },
+  "RegExp": {
+    "call": -164,
+    "construct": -165
+  },
+  "Array.prototype.join": {
+    "call": -44
+  },
+  "Date.now": {
+    "call": -160
+  },
+  "Math.atan2": {
+    "call": -185
+  },
+  "Date.prototype.getUTCHours": {
+    "call": -130
+  },
+  "Global.isNaN": {
+    "call": -68
+  },
+  "XMLHttpRequest": {
+    "construct": -30
+  },
+  "Date.prototype.getUTCDay": {
+    "call": -128
+  },
+  "Number.prototype.toLocaleString": {
+    "call": -105
+  },
+  "String.prototype.substring": {
+    "call": -225
+  },
+  "Math.pow": {
+    "call": -193
+  },
+  "RegExp.prototype.exec": {
+    "call": -161
+  },
+  "Number.prototype.toPrecision": {
+    "call": -109
+  },
+  "SyntaxError": {
+    "call": -175,
+    "construct": -176
+  },
+  "Date.prototype.setMilliseconds": {
+    "call": -139
+  },
+  "String.prototype.search": {
+    "call": -222
+  },
+  "Element.prototype.setAttribute": {
+    "call": -31
+  },
+  "BoundFunctionHelper": {
+    "call": -201,
+    "construct": -202
+  },
+  "JSON.parse": {
+    "call": -199
+  },
+  "String.prototype.slice": {
+    "call": -223
+  },
+  "Object.prototype.hasOwnProperty": {
+    "call": -77
+  },
+  "Array.prototype.forEach": {
+    "call": -57
+  },
+  "Date.prototype.getDay": {
+    "call": -127
+  },
+  "HTMLBodyElement": {
+    "call": -37
+  },
+  "Global.parseInt": {
+    "call": -66
+  },
+  "Date.prototype.setDate": {
+    "call": -147
+  },
+  "Date.prototype.toUTCString": {
+    "call": -153
+  },
+  "String.prototype.indexOf": {
+    "call": -217
+  },
+  "Array.isArray": {
+    "call": -64
+  },
+  "Array.prototype.concat": {
+    "call": -43
+  },
+  "Date.prototype.toTimeString": {
+    "call": -115
+  },
+  "Date.prototype.toLocaleString": {
+    "call": -116
+  },
+  "Math.floor": {
+    "call": -189
+  },
+  "String": {
+    "call": -231,
+    "construct": -232
+  },
+  "Document": {
+    "call": -10,
+    "construct": -11
+  }
+}

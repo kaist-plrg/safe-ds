@@ -27,8 +27,8 @@ docker by following the instruction in
 [https://docs.docker.com/get-started/](https://docs.docker.com/get-started/)
 and downlaod our docker image with the following command:
 ```
-$ docker pull GMBale/fse-21-safe-ds
-$ docker run -it -m=16g --rm GMBale/fse-21-safe-ds
+$ docker pull gmbale/fse-21-safe-ds
+$ docker run -it -m=16g --rm gmbale/fse-21-safe-ds
 # user: guest, password: safeds
 ```
 _WARNING_: The docker image is 3GB large thus be patient when you
@@ -43,7 +43,7 @@ $ cd $SAFE_HOME/eval
 ### Analyze a JavaScript file with dynamic shortcut and print results
 You can analyze a JavaScript program with **-ds** option as follows.
 ```
-$ ./run -w -ds [INPUT JS FILE]
+$ ./run -w -ds <INPUT JS FILE>
 ```
 For example, `$ ./run -w -ds ../tests/semantics/language/function1.js`.
 
