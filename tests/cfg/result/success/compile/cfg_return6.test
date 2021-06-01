@@ -1,0 +1,18 @@
+function f(this, <>arguments<>1) 
+{
+  return
+  <>break<>2 : {
+    while(true)
+    {
+      <>continue<>3 : x = "A"
+    }
+  }
+}
+var x
+{
+  <>obj<>4 = @ToObject(f)
+  <>arguments<>5 = []
+  <>fun<>6 = @GetBase(f)
+  <>Global<>ignore2 = <>obj<>4(<>fun<>6, <>arguments<>5)
+}
+

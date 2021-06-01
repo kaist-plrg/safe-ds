@@ -1,0 +1,20 @@
+function[0] top-level {
+  Entry[-1] -> [0]
+
+  Block[0] -> [2], ExitExc
+    [0] noop(StartOfFile)
+    [1] x := 1
+
+  Block[1] -> [2], ExitExc
+    [0] x := 2
+
+  Label(l)[2] -> Exit, ExitExc
+    [0] x := 3
+    [1] noop(EndOfFile)
+
+  Exit[-2]
+
+  ExitExc[-3]
+
+}
+

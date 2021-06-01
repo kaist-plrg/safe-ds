@@ -1,0 +1,433 @@
+function buildKernel(this, <>arguments<>1) 
+{
+  var <>ss<>2
+  var <>factor<>3
+  var <>i<>4
+  var <>j<>5
+  var <>g<>6
+  {
+    <>ss<>2 = sigma * sigma
+  }
+  {
+    <>y<>7 = 2
+    <>obj<>8 = @ToObject(Math)
+    <>factor<>3 = <>y<>7 * <>obj<>8["PI"] * <>ss<>2
+  }
+  {
+    <>Global<>ignore3 = []
+    kernel = <>Global<>ignore3
+  }
+  {
+    <>obj<>9 = @ToObject(kernel)
+    <>temp<>10 = []
+    <>arguments<>11 = [<>temp<>10, ]
+    <>fun<>12 = @ToObject(<>obj<>9["push"])
+    <>Global<>ignore4 = <>fun<>12(<>obj<>9, <>arguments<>11)
+  }
+  {
+    <>i<>4 = 0
+  }
+  <>break<>13 : {
+    {
+      <>continue<>14 : {
+        {
+          <>obj<>15 = @ToObject(Math)
+          <>temp<>16 = - <>i<>4 * <>i<>4 / 2 * <>ss<>2
+          <>arguments<>17 = [<>temp<>16, ]
+          <>fun<>18 = @ToObject(<>obj<>15["exp"])
+          <>y<>19 = <>fun<>18(<>obj<>15, <>arguments<>17)
+          <>g<>6 = <>y<>19 / <>factor<>3
+        }
+        if(<>g<>6 < 0.001)
+          break <>break<>13
+        {
+          <>obj<>20 = @ToObject(kernel)
+          <>obj<>21 = @ToObject(<>obj<>20[0])
+          <>temp<>22 = <>g<>6
+          <>arguments<>23 = [<>temp<>22, ]
+          <>fun<>24 = @ToObject(<>obj<>21["push"])
+          <>Global<>ignore7 = <>fun<>24(<>obj<>21, <>arguments<>23)
+        }
+        {
+          <>old<>25 = <>i<>4
+          <>new<>26 = @ToNumber(<>old<>25)
+          <>i<>4 = <>new<>26 + 1
+          <>Global<>ignore9 = <>new<>26 + 1
+        }
+      }
+    }
+    while(<>i<>4 < 7)
+    {
+      <>continue<>14 : {
+        {
+          <>obj<>15 = @ToObject(Math)
+          <>temp<>16 = - <>i<>4 * <>i<>4 / 2 * <>ss<>2
+          <>arguments<>17 = [<>temp<>16, ]
+          <>fun<>18 = @ToObject(<>obj<>15["exp"])
+          <>y<>19 = <>fun<>18(<>obj<>15, <>arguments<>17)
+          <>g<>6 = <>y<>19 / <>factor<>3
+        }
+        if(<>g<>6 < 0.001)
+          break <>break<>13
+        {
+          <>obj<>20 = @ToObject(kernel)
+          <>obj<>21 = @ToObject(<>obj<>20[0])
+          <>temp<>22 = <>g<>6
+          <>arguments<>23 = [<>temp<>22, ]
+          <>fun<>24 = @ToObject(<>obj<>21["push"])
+          <>Global<>ignore7 = <>fun<>24(<>obj<>21, <>arguments<>23)
+        }
+        {
+          <>old<>25 = <>i<>4
+          <>new<>26 = @ToNumber(<>old<>25)
+          <>i<>4 = <>new<>26 + 1
+          <>Global<>ignore9 = <>new<>26 + 1
+        }
+      }
+    }
+  }
+  kernelSize = <>i<>4
+  <>break<>27 : {
+    {
+      <>j<>5 = 1
+      <>Global<>ignore12 = 1
+    }
+    while(<>j<>5 < kernelSize)
+    {
+      <>continue<>28 : {
+        {
+          <>obj<>29 = @ToObject(kernel)
+          <>temp<>30 = []
+          <>arguments<>31 = [<>temp<>30, ]
+          <>fun<>32 = @ToObject(<>obj<>29["push"])
+          <>Global<>ignore15 = <>fun<>32(<>obj<>29, <>arguments<>31)
+        }
+        <>break<>33 : {
+          {
+            <>i<>4 = 0
+            <>Global<>ignore17 = 0
+          }
+          while(<>i<>4 < kernelSize)
+          {
+            <>continue<>34 : {
+              {
+                <>obj<>35 = @ToObject(Math)
+                <>temp<>36 = - <>i<>4 * <>i<>4 + <>j<>5 * <>j<>5 / 2 * <>ss<>2
+                <>arguments<>37 = [<>temp<>36, ]
+                <>fun<>38 = @ToObject(<>obj<>35["exp"])
+                <>y<>39 = <>fun<>38(<>obj<>35, <>arguments<>37)
+                <>g<>6 = <>y<>39 / <>factor<>3
+              }
+              {
+                <>obj<>40 = @ToObject(kernel)
+                <>obj<>41 = @ToObject(<>obj<>40[<>j<>5])
+                <>temp<>42 = <>g<>6
+                <>arguments<>43 = [<>temp<>42, ]
+                <>fun<>44 = @ToObject(<>obj<>41["push"])
+                <>Global<>ignore21 = <>fun<>44(<>obj<>41, <>arguments<>43)
+              }
+            }
+            {
+              <>old<>45 = <>i<>4
+              <>new<>46 = @ToNumber(<>old<>45)
+              <>i<>4 = <>new<>46 + 1
+              <>Global<>ignore19 = <>new<>46 + 1
+            }
+          }
+        }
+      }
+      {
+        <>old<>47 = <>j<>5
+        <>new<>48 = @ToNumber(<>old<>47)
+        <>j<>5 = <>new<>48 + 1
+        <>Global<>ignore14 = <>new<>48 + 1
+      }
+    }
+  }
+  kernelSum = 0
+  <>break<>49 : {
+    {
+      <>j<>5 = 1 - kernelSize
+      <>Global<>ignore24 = 1 - kernelSize
+    }
+    while(<>j<>5 < kernelSize)
+    {
+      <>continue<>50 : <>break<>51 : {
+        {
+          <>i<>4 = 1 - kernelSize
+          <>Global<>ignore28 = 1 - kernelSize
+        }
+        while(<>i<>4 < kernelSize)
+        {
+          <>continue<>52 : {
+            <>old<>53 = kernelSum
+            <>obj<>54 = @ToObject(kernel)
+            <>obj<>55 = @ToObject(Math)
+            <>temp<>56 = <>j<>5
+            <>arguments<>57 = [<>temp<>56, ]
+            <>fun<>58 = @ToObject(<>obj<>55["abs"])
+            <>field1<>59 = <>fun<>58(<>obj<>55, <>arguments<>57)
+            <>obj<>60 = @ToObject(<>obj<>54[<>field1<>59])
+            <>obj<>61 = @ToObject(Math)
+            <>temp<>62 = <>i<>4
+            <>arguments<>63 = [<>temp<>62, ]
+            <>fun<>64 = @ToObject(<>obj<>61["abs"])
+            <>field1<>65 = <>fun<>64(<>obj<>61, <>arguments<>63)
+            kernelSum = <>old<>53 + <>obj<>60[<>field1<>65]
+          }
+          {
+            <>old<>66 = <>i<>4
+            <>new<>67 = @ToNumber(<>old<>66)
+            <>i<>4 = <>new<>67 + 1
+            <>Global<>ignore30 = <>new<>67 + 1
+          }
+        }
+      }
+      {
+        <>old<>68 = <>j<>5
+        <>new<>69 = @ToNumber(<>old<>68)
+        <>j<>5 = <>new<>69 + 1
+        <>Global<>ignore26 = <>new<>69 + 1
+      }
+    }
+  }
+}
+function gaussianBlur(this, <>arguments<>70) 
+{
+  var <>y<>71
+  var <>x<>72
+  var <>r<>73
+  var <>g<>74
+  var <>b<>75
+  var <>a<>76
+  var <>j<>77
+  var <>i<>78
+  {
+    {
+      <>y<>71 = 0
+    }
+    <>break<>79 : {
+      while(<>y<>71 < height)
+      {
+        <>continue<>80 : {
+          {
+            <>x<>72 = 0
+          }
+          <>break<>81 : {
+            while(<>x<>72 < width)
+            {
+              <>continue<>82 : {
+                {
+                  {
+                    <>r<>73 = 0
+                  }
+                  {
+                    <>g<>74 = 0
+                  }
+                  {
+                    <>b<>75 = 0
+                  }
+                  {
+                    <>a<>76 = 0
+                  }
+                }
+                {
+                  {
+                    <>j<>77 = 1 - kernelSize
+                  }
+                  <>break<>83 : {
+                    while(<>j<>77 < kernelSize)
+                    {
+                      <>continue<>84 : {
+                        {
+                          if(<>y<>71 + <>j<>77 < 0)
+                            <>new<>85 = <>y<>71 + <>j<>77 < 0
+                          else
+                          {
+                            <>new<>85 = <>y<>71 + <>j<>77 >= height
+                          }
+                          if(<>new<>85)
+                            break <>continue<>84
+                        }
+                        {
+                          {
+                            <>i<>78 = 1 - kernelSize
+                          }
+                          <>break<>86 : {
+                            while(<>i<>78 < kernelSize)
+                            {
+                              <>continue<>87 : {
+                                {
+                                  if(<>x<>72 + <>i<>78 < 0)
+                                    <>new<>88 = <>x<>72 + <>i<>78 < 0
+                                  else
+                                  {
+                                    <>new<>88 = <>x<>72 + <>i<>78 >= width
+                                  }
+                                  if(<>new<>88)
+                                    break <>continue<>87
+                                }
+                                {
+                                  <>old<>89 = <>r<>73
+                                  <>obj<>90 = @ToObject(squidImageData)
+                                  <>y<>91 = <>obj<>90[4 * <>y<>71 + <>j<>77 * width + <>x<>72 + <>i<>78 + 0]
+                                  <>obj<>92 = @ToObject(kernel)
+                                  <>obj<>93 = @ToObject(Math)
+                                  <>temp<>94 = <>j<>77
+                                  <>arguments<>95 = [<>temp<>94, ]
+                                  <>fun<>96 = @ToObject(<>obj<>93["abs"])
+                                  <>field1<>97 = <>fun<>96(<>obj<>93, <>arguments<>95)
+                                  <>obj<>98 = @ToObject(<>obj<>92[<>field1<>97])
+                                  <>obj<>99 = @ToObject(Math)
+                                  <>temp<>100 = <>i<>78
+                                  <>arguments<>101 = [<>temp<>100, ]
+                                  <>fun<>102 = @ToObject(<>obj<>99["abs"])
+                                  <>field1<>103 = <>fun<>102(<>obj<>99, <>arguments<>101)
+                                  <>r<>73 = <>old<>89 + <>y<>91 * <>obj<>98[<>field1<>103]
+                                }
+                                {
+                                  <>old<>104 = <>g<>74
+                                  <>obj<>105 = @ToObject(squidImageData)
+                                  <>y<>106 = <>obj<>105[4 * <>y<>71 + <>j<>77 * width + <>x<>72 + <>i<>78 + 1]
+                                  <>obj<>107 = @ToObject(kernel)
+                                  <>obj<>108 = @ToObject(Math)
+                                  <>temp<>109 = <>j<>77
+                                  <>arguments<>110 = [<>temp<>109, ]
+                                  <>fun<>111 = @ToObject(<>obj<>108["abs"])
+                                  <>field1<>112 = <>fun<>111(<>obj<>108, <>arguments<>110)
+                                  <>obj<>113 = @ToObject(<>obj<>107[<>field1<>112])
+                                  <>obj<>114 = @ToObject(Math)
+                                  <>temp<>115 = <>i<>78
+                                  <>arguments<>116 = [<>temp<>115, ]
+                                  <>fun<>117 = @ToObject(<>obj<>114["abs"])
+                                  <>field1<>118 = <>fun<>117(<>obj<>114, <>arguments<>116)
+                                  <>g<>74 = <>old<>104 + <>y<>106 * <>obj<>113[<>field1<>118]
+                                }
+                                {
+                                  <>old<>119 = <>b<>75
+                                  <>obj<>120 = @ToObject(squidImageData)
+                                  <>y<>121 = <>obj<>120[4 * <>y<>71 + <>j<>77 * width + <>x<>72 + <>i<>78 + 2]
+                                  <>obj<>122 = @ToObject(kernel)
+                                  <>obj<>123 = @ToObject(Math)
+                                  <>temp<>124 = <>j<>77
+                                  <>arguments<>125 = [<>temp<>124, ]
+                                  <>fun<>126 = @ToObject(<>obj<>123["abs"])
+                                  <>field1<>127 = <>fun<>126(<>obj<>123, <>arguments<>125)
+                                  <>obj<>128 = @ToObject(<>obj<>122[<>field1<>127])
+                                  <>obj<>129 = @ToObject(Math)
+                                  <>temp<>130 = <>i<>78
+                                  <>arguments<>131 = [<>temp<>130, ]
+                                  <>fun<>132 = @ToObject(<>obj<>129["abs"])
+                                  <>field1<>133 = <>fun<>132(<>obj<>129, <>arguments<>131)
+                                  <>b<>75 = <>old<>119 + <>y<>121 * <>obj<>128[<>field1<>133]
+                                }
+                                {
+                                  <>old<>134 = <>a<>76
+                                  <>obj<>135 = @ToObject(squidImageData)
+                                  <>y<>136 = <>obj<>135[4 * <>y<>71 + <>j<>77 * width + <>x<>72 + <>i<>78 + 3]
+                                  <>obj<>137 = @ToObject(kernel)
+                                  <>obj<>138 = @ToObject(Math)
+                                  <>temp<>139 = <>j<>77
+                                  <>arguments<>140 = [<>temp<>139, ]
+                                  <>fun<>141 = @ToObject(<>obj<>138["abs"])
+                                  <>field1<>142 = <>fun<>141(<>obj<>138, <>arguments<>140)
+                                  <>obj<>143 = @ToObject(<>obj<>137[<>field1<>142])
+                                  <>obj<>144 = @ToObject(Math)
+                                  <>temp<>145 = <>i<>78
+                                  <>arguments<>146 = [<>temp<>145, ]
+                                  <>fun<>147 = @ToObject(<>obj<>144["abs"])
+                                  <>field1<>148 = <>fun<>147(<>obj<>144, <>arguments<>146)
+                                  <>a<>76 = <>old<>134 + <>y<>136 * <>obj<>143[<>field1<>148]
+                                }
+                              }
+                              {
+                                <>old<>149 = <>i<>78
+                                <>new<>150 = @ToNumber(<>old<>149)
+                                <>i<>78 = <>new<>150 + 1
+                                <>Global<>ignore47 = <>new<>150 + 1
+                              }
+                            }
+                          }
+                        }
+                      }
+                      {
+                        <>old<>151 = <>j<>77
+                        <>new<>152 = @ToNumber(<>old<>151)
+                        <>j<>77 = <>new<>152 + 1
+                        <>Global<>ignore44 = <>new<>152 + 1
+                      }
+                    }
+                  }
+                }
+                {
+                  <>obj<>153 = @ToObject(squidImageData)
+                  <>obj<>153[4 * <>y<>71 * width + <>x<>72 + 0] = <>r<>73 / kernelSum
+                }
+                {
+                  <>obj<>154 = @ToObject(squidImageData)
+                  <>obj<>154[4 * <>y<>71 * width + <>x<>72 + 1] = <>g<>74 / kernelSum
+                }
+                {
+                  <>obj<>155 = @ToObject(squidImageData)
+                  <>obj<>155[4 * <>y<>71 * width + <>x<>72 + 2] = <>b<>75 / kernelSum
+                }
+                {
+                  <>obj<>156 = @ToObject(squidImageData)
+                  <>obj<>156[4 * <>y<>71 * width + <>x<>72 + 3] = <>a<>76 / kernelSum
+                }
+              }
+              {
+                <>old<>157 = <>x<>72
+                <>new<>158 = @ToNumber(<>old<>157)
+                <>x<>72 = <>new<>158 + 1
+                <>Global<>ignore37 = <>new<>158 + 1
+              }
+            }
+          }
+        }
+        {
+          <>old<>159 = <>y<>71
+          <>new<>160 = @ToNumber(<>old<>159)
+          <>y<>71 = <>new<>160 + 1
+          <>Global<>ignore34 = <>new<>160 + 1
+        }
+      }
+    }
+  }
+  return squidImageData
+}
+var squidImageData
+var sigma
+var kernel
+var kernelSize
+var kernelSum
+var width
+var height
+{
+  <>Global<>ignore56 = [A LOT!!! 427200 elements are not printed here.]
+  squidImageData = <>Global<>ignore56
+}
+{
+  sigma = 10
+}
+{
+  <>obj<>161 = @ToObject(buildKernel)
+  <>arguments<>162 = []
+  <>fun<>163 = @GetBase(buildKernel)
+  <>Global<>ignore58 = <>obj<>161(<>fun<>163, <>arguments<>162)
+}
+{
+  {
+    width = 400
+  }
+  {
+    height = 267
+  }
+}
+{
+  <>obj<>164 = @ToObject(gaussianBlur)
+  <>arguments<>165 = []
+  <>fun<>166 = @GetBase(gaussianBlur)
+  <>Global<>ignore61 = <>obj<>164(<>fun<>166, <>arguments<>165)
+}
+

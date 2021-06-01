@@ -1,0 +1,10 @@
+  {
+    <>alpha<>1 = @ToObject(1);
+    {
+      2;
+      "jsaf";
+    }
+  }
+  <>alpha<>2 = @ToObject(true);
+  <>alpha<>3 = @ToObject("jsaf");
+  

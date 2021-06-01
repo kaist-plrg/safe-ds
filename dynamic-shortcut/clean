@@ -1,0 +1,12 @@
+#!/bin/sh
+
+rm -f direct_vanilla.js
+rm -f function.json
+rm -f iidMap.json
+rm -f iidToLocation.json
+rm -f jalangi.result
+rm -f target_jalangi_.js
+rm -f output*.json
+rm -f state*.json
+rm -f tmp-ds-jalangi.result
+rm -f fidToName.json

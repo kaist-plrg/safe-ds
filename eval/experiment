@@ -1,0 +1,10 @@
+#!/bin/bash
+
+[[ -d raw_data ]] && rm -rf raw_data
+mkdir -p raw_data
+./all -w -l && mv result raw_data/original-no-DS
+./all -w -l -ds && mv result raw_data/original-DS
+cp $DS_HOME/fidToName.json raw_data/original-DS/
+./all -w -l -a=1 && mv result raw_data/abstracted-no-DS
+./all -w -l -ds -a=1 && mv result raw_data/abstracted-DS
+cp $DS_HOME/fidToName.json raw_data/abstracted-DS/

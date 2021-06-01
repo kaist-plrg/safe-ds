@@ -1,0 +1,41 @@
+function[0] top-level {
+  Entry[-1] -> [0]
+
+  Block[0] -> [1], ExitExc
+    [0] noop(StartOfFile)
+    [1] x := 5
+
+  Try[1] -> [3], [2]
+    [0] x := 3
+
+  Catch[2] -> [9], ExitExc
+    [0] catch(<>x<>1)
+    [1] <>x<>1 := 2
+
+  Try[3] -> [6], [5], [4]
+    [0] y := 103
+
+  Catch[4] -> [8]
+    [0] catch(<>y<>2)
+
+  Block[5] -> [7], [4]
+    [0] assert(y > x * 10)
+    [1] <>old<>3 := y
+    [2] y := <>old<>3 / 2
+
+  Block[6] -> [7], [4]
+    [0] assert(! y > x * 10)
+
+  Block[7] -> [8]
+
+  Finally[8] -> [9]
+
+  Finally[9] -> Exit
+    [0] noop(EndOfFile)
+
+  Exit[-2]
+
+  ExitExc[-3]
+
+}
+

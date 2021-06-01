@@ -1,0 +1,47 @@
+function[0] top-level {
+  Entry[-1] -> [0]
+
+  Block[0] -> [1], ExitExc
+    [0] f := function (1) @ #1, #2
+    [1] noop(StartOfFile)
+    [2] <>Global<>ignore2 := "test"
+    [3] <>Global<>ignore4 := 3
+    [4] <>Global<>ignore6 := 9.0
+    [5] <>Global<>ignore8 := null
+    [6] <>Global<>ignore10 := 3
+    [7] <>obj<>4 := @ToObject(f) @ #3
+    [8] <>temp<>5 := 3
+    [9] <>temp<>6 := true
+    [10] <>arguments<>7 := allocArg(2) @ #4
+    [11] <>arguments<>7["0"] := <>temp<>5
+    [12] <>arguments<>7["1"] := <>temp<>6
+    [13] <>fun<>8 := @GetBase(f)
+    [14] <>this<> := enterCode(<>fun<>8)
+
+  Call[1] -> ExitExc
+    [0] call(<>obj<>4, <>this<>, <>arguments<>7) @ #5
+
+  AfterCall[2] -> [4]
+
+  AfterCatch[3] -> ExitExc
+
+  Block[4] -> Exit
+    [0] noop(EndOfFile)
+
+  Exit[-2]
+
+  ExitExc[-3]
+
+}
+
+function[1] f {
+  Entry[-1] -> [0]
+
+  Block[0] -> Exit
+
+  Exit[-2]
+
+  ExitExc[-3]
+
+}
+

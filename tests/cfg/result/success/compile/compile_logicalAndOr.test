@@ -1,0 +1,61 @@
+
+
+{
+  if(true)
+  {
+    <>new<>1 = false
+  }
+  else
+    <>new<>1 = true
+  if(<>new<>1)
+    <>Global<>ignore2 = "true"
+  else
+    <>Global<>ignore4 = "false"
+}
+{
+  if(true)
+    <>new<>2 = true
+  else
+  {
+    <>new<>2 = false
+  }
+  if(<>new<>2)
+    <>Global<>ignore6 = "true"
+  else
+    <>Global<>ignore8 = "false"
+}
+{
+  if(true)
+  {
+    <>new1<>3 = false
+  }
+  else
+    <>new1<>3 = true
+  if(<>new1<>3)
+  {
+    <>Global<>ignore9 = "true"
+  }
+  else
+  {
+    <>Global<>ignore9 = "false"
+  }
+  x = <>Global<>ignore9
+}
+{
+  if(true)
+    <>new1<>4 = true
+  else
+  {
+    <>new1<>4 = false
+  }
+  if(<>new1<>4)
+  {
+    <>Global<>ignore10 = "true"
+  }
+  else
+  {
+    <>Global<>ignore10 = "false"
+  }
+  x = <>Global<>ignore10
+}
+

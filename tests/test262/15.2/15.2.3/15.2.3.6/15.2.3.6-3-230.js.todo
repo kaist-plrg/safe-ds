@@ -1,0 +1,22 @@
+//   TODO getter/setter
+//   function testcase() 
+//   {
+//     var obj = {
+//       
+//     };
+//     try
+// {      @Global.get = (function () 
+//       {
+//         return "globalGetProperty";
+//       });
+//       Object.defineProperty(obj, "property", @Global);
+//       return obj.property === "globalGetProperty";}
+//     finally
+// {      delete @Global.get;}
+// 
+//   }
+//   {
+//     var __result1 = testcase();
+//     var __expect1 = true;
+//   }
+//   

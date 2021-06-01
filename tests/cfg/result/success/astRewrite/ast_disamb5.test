@@ -1,0 +1,13 @@
+  function f() 
+  {
+    function eval(x) 
+    {
+      alert(0);
+    }
+      alert(2);
+    eval(3);
+  }
+  alert(1);
+  alert(4);
+  f();
+  

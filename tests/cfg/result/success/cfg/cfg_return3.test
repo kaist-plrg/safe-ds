@@ -1,0 +1,104 @@
+function[0] top-level {
+  Entry[-1] -> [0]
+
+  Block[0] -> [1], ExitExc
+    [0] f := function (1) @ #11, #12
+    [1] noop(StartOfFile)
+    [2] <>obj<>20 := @ToObject(f) @ #13
+    [3] <>arguments<>21 := allocArg(0) @ #14
+    [4] <>fun<>22 := @GetBase(f)
+    [5] <>this<> := enterCode(<>fun<>22)
+
+  Call[1] -> ExitExc
+    [0] call(<>obj<>20, <>this<>, <>arguments<>21) @ #15
+
+  AfterCall[2] -> [4]
+
+  AfterCatch[3] -> ExitExc
+
+  Block[4] -> Exit
+    [0] noop(EndOfFile)
+
+  Exit[-2]
+
+  ExitExc[-3]
+
+}
+
+function[1] f {
+  Entry[-1] -> [0]
+
+  Block[0] -> Exit, ExitExc
+    [0] <>Global<>ignore1 := function (2) @ #9, #10
+    [1] <>y<>1 := <>Global<>ignore1
+
+  Exit[-2]
+
+  ExitExc[-3]
+
+}
+
+function[2] g {
+  Entry[-1] -> [0]
+
+  Block[0] -> [2], [1], ExitExc
+    [0] <>temp<>4 := 1
+
+  Block[1] -> Exit, ExitExc
+    [0] assert(<>y<>1)
+    [1] return()
+
+  Block[2] -> [4], ExitExc
+    [0] assert(! <>y<>1)
+    [1] <>z<>5 := 678
+    [2] <>obj<>8 := @ToObject(print) @ #1
+    [3] <>temp<>9 := "in"
+    [4] <>arguments<>10 := allocArg(1) @ #2
+    [5] <>arguments<>10["0"] := <>temp<>9
+    [6] <>fun<>11 := @GetBase(print)
+    [7] <>this<> := enterCode(<>fun<>11)
+
+  Block[3] -> Exit
+
+  Call[4] -> ExitExc
+    [0] call(<>obj<>8, <>this<>, <>arguments<>10) @ #3
+
+  AfterCall[5] -> [7]
+
+  AfterCatch[6] -> ExitExc
+
+  Block[7] -> [8], ExitExc
+    [0] <>Global<>ignore5 := function (3) @ #4, #5
+    [1] <>w<>6 := <>Global<>ignore5
+    [2] <>obj<>15 := @ToObject(<>w<>6) @ #6
+    [3] <>temp<>16 := 3
+    [4] <>arguments<>17 := allocArg(1) @ #7
+    [5] <>arguments<>17["0"] := <>temp<>16
+    [6] <>fun<>18 := @GetBase(<>w<>6)
+    [7] <>this<> := enterCode(<>fun<>18)
+
+  Call[8] -> ExitExc
+    [0] call(<>obj<>15, <>this<>, <>arguments<>17) @ #8
+
+  AfterCall[9] -> [3]
+
+  AfterCatch[10] -> ExitExc
+
+  Exit[-2]
+
+  ExitExc[-3]
+
+}
+
+function[3] h {
+  Entry[-1] -> [0]
+
+  Block[0] -> Exit, ExitExc
+    [0] return(<>temp<>4)
+
+  Exit[-2]
+
+  ExitExc[-3]
+
+}
+
