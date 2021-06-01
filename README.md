@@ -31,7 +31,7 @@ $ docker pull gmbale/fse-21-safe-ds
 $ docker run -it -m=16g --rm gmbale/fse-21-safe-ds
 # user: guest, password: safeds
 ```
-_WARNING_: The docker image is 3GB large thus be patient when you
+_WARNING_: The docker image is 1.7GB large thus be patient when you
 download it and please assign more than 16GB memory for the docker engine.
 
 ## Basic Commands
