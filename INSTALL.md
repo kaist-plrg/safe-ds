@@ -12,10 +12,9 @@ docker by following the instruction in
 and downlaod our docker image with the following command:
 ```
 $ docker pull GMBale/fse-21-safe-ds
-$ docker run -it -m=16g --rm GMBale/fse-21-safe-ds
-# user: guest, password: safeds
+$ docker run -w /home/ubuntu/safe-ds -it -m=16g --rm gmbale/fse-21-safe-ds
 ```
-_WARNING_: The docker image is 3GB large thus be patient when you
+_WARNING_: The docker image is 1.7GB large thus be patient when you
 download it and please assign more than 16GB memory for the docker engine.
 
 ## Download SAFE_DS
