@@ -2,7 +2,7 @@
 
 We explain how to install SAFE_DS with necessary environment settings from the
 scratch.  Before installation, please download JDK 8 and
-[`sbt`](https://www.scala-sbt.org/1.x/docs/Installing-sbt-on-Linux.html),
+[`sbt` v1.x](https://www.scala-sbt.org/1.x/docs/Installing-sbt-on-Linux.html),
 [`Node.js`](https://nodejs.org/en/download/) LTS version.
 
 Additionally, we packaged the artifact in a docker container.  If you want to
