@@ -84,8 +84,8 @@ Also, the following file shows the analysis speed-up for each test case.
 $ cat RQ1_speed-up.json
 ```
 It only shows the average analysis speed-up described in Section 6.1.
-To fully calculate Figure 6, 7, and 8, please see 3rd, 4th, 5th, and
-6th columns in the `raw_data/<BENCH-no?-DS>/summary.tsv` files.
+To fully calculate Figure 6, 7, and 8, please see the 3rd, 4th, 5th,
+and 6th columns in the `raw_data/<BENCH-no?-DS>/summary.tsv` files.
 
 ### RQ2. Precision Improvement
 
