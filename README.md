@@ -1,4 +1,4 @@
- SAFE_DS: Accelerating JavaScript Static Analysis via Dynamic Shortcuts
+SAFE_DS: Accelerating JavaScript Static Analysis via Dynamic Shortcuts
 
 **SAFE_DS** is an instance of **D**ynamic **S**hortcuts on JavaScript static analyzer **SAFE**,
 which is a new technique to flexibly switch between abstract and concrete execution during
@@ -54,7 +54,7 @@ $ cat ds-safe.result ds-jalangi.result
 ```
 $ ./clean
 ```
-### Reproduce the experiments on Lodash4 tests (it takes more than 10 hours)
+### Reproduce the experiments on Lodash4 tests (it takes about 24 hours)
 ```
 $ ./experiment
 ```
@@ -84,8 +84,8 @@ Also, the following file shows the analysis speed-up for each test case.
 $ cat RQ1_speed-up.json
 ```
 It only shows the average analysis speed-up described in Section 6.1.
-To fully calculate Figure 6, 7, and 8, please see `summary.tsv` files in 3rd,
-4th, 5th, and 6th columns `raw_data/<BENCH-no?-DS>/summary.tsv`.
+To fully calculate Figure 6, 7, and 8, please see 3rd, 4th, 5th, and
+6th columns in the `raw_data/<BENCH-no?-DS>/summary.tsv` files.
 
 ### RQ2. Precision Improvement
 
